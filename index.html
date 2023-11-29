@@ -46,17 +46,18 @@
             <span class="icon-bar"></span>
           </button>-->
           <a class="navbar-brand" href="#">Game of words, for words</a>
-          <button class="navbar-brand navbar-buttons" id="buttonsRule" style="background-color:transparent; border:none; margin-left:120px;">RULES</button>
-          <button class="navbar-brand navbar-buttons" id="buttonsGame" style="background-color:transparent; border:none;margin-left:80px;">GAME</button>
-          <button class="navbar-brand navbar-buttons" id="buttonsList" style="background-color:transparent; border:none;margin-left:80px;">LEADERS</button>
+          <button class="navbar-brand navbar-buttons" id="buttonsRule" style="background-color:transparent; border:none; margin-left:120px;" onclick="ruleshow()">RULES</button>
+          <button class="navbar-brand navbar-buttons" id="buttonsGame" style="background-color:transparent; border:none;margin-left:80px;" onclick="gameshow()">GAME</button>
+          <button class="navbar-brand navbar-buttons" id="buttonsList" style="background-color:transparent; border:none;margin-left:80px;" onclick="listshow()">LEADERS</button>
         </div>
         
       </div>
     </nav>
        
     <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div id="rules">
     <div class="jumbotron" style="background-color: #333;">
-      <div class="container" id="rules">
+      <div class="container" >
         <h1>Word game!</h1>
         <p> This is a word game. In a set amount of time YOU have to arrange given letters into a word. Each word will award you with points<span id="dott">...</span><span id="more" ><br> So... You wish to know more about this spectacularly working game with no bugs whatsoever.<br> >As previously stated you will be given a set amount of letters, which you must arrange.<br>
                 >Longer words will give you more points. <br> >You can exchange the points you've already earned for a different word, costing you the amount 
@@ -66,16 +67,23 @@
         
       </div>
     </div>
+    </div>
 
     
     
     <!-- seit sakas spele? -->
-    <div>
-        
+    <div id="game" style=" display:none;" > 
+    <div  class=" jumbotron" style="background-color: #333;">
+        <h1>Time to play!</h1>
         
     </div>
+    </div>
     
-    
+    <div id = "leaderboard" style=" display:none;" > 
+    <div class=" jumbotron" style="background-color: #333; ">
+        <h1>Scores!</h1>
+    </div>
+    </div>
     
     
     
@@ -120,6 +128,23 @@
                     THE.innerHTML = "forget";
                     more.style.display = "inline";
                 }
+            }
+            
+            
+            function ruleshow(){
+            rules.style.display= "inline";  
+            game.style.display="none";
+            leaderboard.style.display="none";
+            }
+            function gameshow(){
+            rules.style.display= "none";  
+            game.style.display="inline";
+            leaderboard.style.display="none";
+            }
+            function listshow(){
+            rules.style.display= "none";
+            game.style.display="none";
+            leaderboard.style.display="inline";
             }
             
             
