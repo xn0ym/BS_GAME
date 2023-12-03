@@ -99,6 +99,8 @@ var words = ["apple", "banana", "cherry", "grape", "orange", "strawberry", "wate
             });
  
             if (userWord === randomWord) {
+                
+                
                 document.getElementById("message").textContent = "Correct! The word is " + randomWord + ".";
                 boxes.forEach(function(box) {
                     box.setAttribute("draggable", "false");
