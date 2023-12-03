@@ -28,20 +28,22 @@
                 display:none;
             }
             .letter-box {
-            width: 50px;
-            height: 50px;
-            background-color: lightblue;
-            display: inline-block;
-            text-align: center;
-            margin: 5px;
-            cursor: grab;
-            border: 3px solid #ffffff;
-        }
-        .letter-box:active {
-            border: 3px dotted #666;
-           
-        }
-            
+                width: 50px;
+                height: 50px;
+                background-color: #262323;
+                display: inline-block;
+                text-align: center;
+                margin: 5px;
+                cursor: grab;
+                border: 3px solid #ffffff;
+                padding-top: 12px;
+            }
+            .letter-box:active {
+                border: 3px dotted #666;
+                
+
+            }
+
         </style>
     </head>
     <body>
@@ -95,17 +97,24 @@
                 <div class="container">
                     <h1>Time to play!</h1>
                     <p>Arrange the letter boxes to form a word:</p>
-    <div id="letter-boxes">
-     
-    </div>
- 
-    <button onclick="checkWord()">Submit</button>
- 
-    <p id="message"></p>
+                    <div id="letter-boxes">
+
+                    </div>
+                    <br>
+
+                    <button style="background-color:#262323;" class="btn-lg" onclick="checkWord()">submit</button>
+
+                    <p id="message"></p>
                 </div>    
             </div>
         </div>
 
+
+
+
+
+
+        <!--leaderboard-->
         <div id = "leaderboard" style=" display:none;" > 
             <div class=" jumbotron" style="background-color: #333; ">
                 <div class="container">
